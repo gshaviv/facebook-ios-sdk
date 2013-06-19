@@ -374,15 +374,23 @@ static NSError *g_fetchedAppSettingsError = nil;
 }
 
 + (BOOL)isRegisteredURLScheme:(NSString *)urlScheme {
-//    static dispatch_once_t fetchBundleOnce;
-//    static NSArray *urlSchemes = nil;
-//    
-//    dispatch_once(&fetchBundleOnce, ^{
-//        
-//        urlSchemes = [[[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleURLTypes"] objectAtIndex:0] valueForKey:@"CFBundleURLSchemes"];
-//    });
-//    return [urlSchemes containsObject:urlScheme];
-    return YES;
+    static dispatch_once_t fetchBundleOnce;
+    //static NSArray *urlSchemes = nil;
+    __block BOOL registered = NO;
+    dispatch_once(&fetchBundleOnce, ^{
+        
+        for (id scheme in [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleURLTypes"])
+        {
+            if([[scheme valueForKey:@"CFBundleURLSchemes"] containsObject:urlScheme])
+            {
+                registered = YES;
+                break;
+            }
+        }
+        //urlSchemes = [[[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleURLTypes"] objectAtIndex:1] valueForKey:@"CFBundleURLSchemes"];
+    });
+    //return [urlSchemes containsObject:urlScheme];
+    return registered;
 }
 
 @end
