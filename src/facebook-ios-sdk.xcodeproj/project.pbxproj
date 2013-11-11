@@ -1817,6 +1817,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/facebook_ios_sdk.dst;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1838,6 +1839,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DSTROOT = /tmp/facebook_ios_sdk.dst;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1972,6 +1974,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DSTROOT = /tmp/facebook_ios_sdk.dst;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -2070,6 +2073,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/facebook_ios_sdk.dst;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
