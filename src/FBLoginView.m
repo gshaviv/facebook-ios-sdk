@@ -251,7 +251,7 @@ static CGSize g_buttonSize;
 #ifdef __IPHONE_6_0
     self.label.textAlignment = NSTextAlignmentCenter;
 #else
-    self.label.textAlignment = UITextAlignmentCenter;
+    self.label.textAlignment = NSTextAlignmentCenter;
 #endif
     self.label.backgroundColor = [UIColor clearColor];
     self.label.font = font;

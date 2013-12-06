@@ -196,7 +196,7 @@
 #ifdef __IPHONE_6_0
     self.connectedStateLabel.textAlignment = NSTextAlignmentCenter;
 #else
-    self.connectedStateLabel.textAlignment = UITextAlignmentCenter;
+    self.connectedStateLabel.textAlignment = NSTextAlignmentCenter;
 #endif
     self.connectedStateLabel.numberOfLines = 0;
     self.connectedStateLabel.font = [UIFont boldSystemFontOfSize:16.0];
